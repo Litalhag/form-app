@@ -1,40 +1,80 @@
+:root {
+  --primary-100: #333;
+  --primary-200: #ccc;
+  --primary-300: #ffffff;
+  --primary-400: #f7e8f8;
+  --primary-500: #ebc3ee;
+  --primary-600: #d89edd;
+  --primary-700: #c573cc;
+  --primary-800: #e67458;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  background-color: var(--primary-400);
   margin: 40px;
 }
 
+h1 {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: relative;
+  color: var(--primary-100);
+}
+
+.line {
+  position: absolute;
+  top: 6.5rem;
+  width: 20rem;
+  height: 0.2rem;
+  background: var(--primary-600);
+  margin-top: 0.5rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .container {
-  background-color: #ffffff;
+  background-color: var(--primary-300);
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   width: 400px;
   margin: 0 auto;
+}
+
+.container:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 
 label {
   display: block;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--primary-100);
   font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input[type='text'],
+input[type='email'],
+input[type='password'] {
   width: 90%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--primary-200);
   border-radius: 4px;
   margin-bottom: 20px;
   transition: border 0.3s ease;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   display: block;
   margin: 0 auto;
-  background-color: #4CAF50;
+  background-color: var(--primary-600);
   color: white;
   padding: 15px 30px;
   border: none;
@@ -44,18 +84,26 @@ input[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
+input[type='submit']:hover {
+  background-color: var(--primary-700);
 }
 
 input.error {
-  border: 2px solid red;
+  border: 2px solid var(--primary-800);
   background-color: #fdd;
 }
 
 .error-message {
-  color: red;
+  color: var(--primary-800);
   font-size: 14px;
   margin-bottom: 20px;
   transition: color 0.3s ease;
+}
+
+[type='username']:focus,
+[type='email']:focus,
+[type='password']:focus {
+  outline-color: var(--primary-600);
+  outline-width: 1.5px;
+  outline-style: solid;
 }
