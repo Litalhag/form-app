@@ -100,9 +100,8 @@ input.error {
   transition: color 0.3s ease;
 }
 
-[type='username']:focus,
-[type='email']:focus,
-[type='password']:focus {
+input[type='text']:focus,
+input[type='password']:focus {
   outline-color: var(--primary-600);
   outline-width: 1.5px;
   outline-style: solid;
